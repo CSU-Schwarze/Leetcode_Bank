@@ -33,6 +33,7 @@ class Solution(object):
                 l1.next = ListNode(0)
             if not l1.next and not l2.next:
                 return head
+            
             l1, l2 = l1.next, l2.next
         
 # @lc code=end
