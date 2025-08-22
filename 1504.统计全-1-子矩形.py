@@ -30,6 +30,7 @@ class Solution(object):
                     if width == 0:
                         break
                     cnt += width
+        
         return cnt
         
         
