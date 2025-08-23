@@ -12,6 +12,20 @@ class Solution(object):
         :type numRows: int
         :rtype: str
         """
-        
+        if numRows < 2:
+            return s
+        sin = numRows * 2 - 2
+        l = len(s)
+        res = ""
+        for i in range(numRows):
+            if i == 0 or i == numRows-1:
+                for j in range(i, l, sin):
+                    res += s[j]
+            else:
+                for j in range(i, l, sin):
+                    res += s[j]
+                    if j + sin - 2*i < l:
+                        res += s[j + sin - 2*i]
+        return res
 # @lc code=end
 
